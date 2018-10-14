@@ -5,7 +5,7 @@
 ### App Walk-though\
 \
 \
-<img src="https://imgur.com/a/V6UYyiZ.gif" width=200><br>\
+<img src="https://imgur.com/NUZQZmJ.gif" width=200><br>\
 \
 \
 \
