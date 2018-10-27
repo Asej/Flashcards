@@ -21,9 +21,27 @@ class ViewController: UIViewController {
         }
      
     }
+    func updateFlashCard(question: String, answer: String){
+        fr.text = question
+        backLabel.text = answer
+    }
+    @IBAction func Correct(_ sender: Any) {
+        frontLabel.backgroundColor = UIColor.green;
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
+        if(segue.identifier == "EditSegue"){
+            creationController.initialQuestion = fr.text!
+            creationController.initialAnswer = backLabel.text!
+        }
     }
 
 
