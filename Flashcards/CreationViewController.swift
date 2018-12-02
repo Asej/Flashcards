@@ -14,22 +14,38 @@ class CreationViewController: UIViewController {
         super.viewDidLoad()
         
         // Do any additional setup after loading the view.
+<<<<<<< HEAD
       
     }
     @IBOutlet weak var intialQuestion: UITextField!
+=======
+        questionTextField.text = initialQuestion
+        answerTextField.text = initialAnswer
+    }
+>>>>>>> dc45978db53858999f88816734b0b47d8aecee32
     @IBAction func didTapOnCancel(_ sender: Any) {
            dismiss(animated: true)
     }
     
     @IBOutlet var questionTextField: UITextField!
+<<<<<<< HEAD
+=======
+    
+>>>>>>> dc45978db53858999f88816734b0b47d8aecee32
     @IBOutlet weak var answerTextField: UITextField!
     var initialQuestion: String?
     var initialAnswer: String?
     @IBAction func didTapDone(_ sender: Any) {
+<<<<<<< HEAD
       
         let questionText = questionTextField.text;
         let answerText = answerTextField.text;
         dismiss(animated: true)
+=======
+        let questionText = questionTextField.text
+        let answerText = answerTextField.text
+
+>>>>>>> dc45978db53858999f88816734b0b47d8aecee32
     }
     
 

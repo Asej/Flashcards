@@ -39,12 +39,21 @@ class ViewController: UIViewController {
     @IBAction func nextPage(_ sender: Any) {
     }
     func updateFlashCard(question: String, answer: String){
+<<<<<<< HEAD
         let flashcard = Flashcard(question: question, answer: answer)
         flashcards.append(flashcard)
         fr.text = question
         backLabel.text = answer
     }
    
+=======
+        fr.text = question
+        backLabel.text = answer
+    }
+    @IBAction func Correct(_ sender: Any) {
+        frontLabel.backgroundColor = UIColor.green;
+    }
+>>>>>>> dc45978db53858999f88816734b0b47d8aecee32
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -61,7 +70,21 @@ class ViewController: UIViewController {
             creationController.initialAnswer = fr.text!
         }
     }
+<<<<<<< HEAD
 }
+=======
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let navigationController = segue.destination as! UINavigationController
+        let creationController = navigationController.topViewController as! CreationViewController
+        
+        creationController.flashcardsController = self
+        
+        if(segue.identifier == "EditSegue"){
+            creationController.initialQuestion = fr.text!
+            creationController.initialAnswer = backLabel.text!
+        }
+    }
+>>>>>>> dc45978db53858999f88816734b0b47d8aecee32
 
 
 
